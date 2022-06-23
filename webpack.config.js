@@ -1,11 +1,9 @@
 const path = require("path");
-const envKeys = require("./env-keys");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractplugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// const { EnvironmentPlugin } = require("webpack");
 
 /** @type {import('webpack').Configuration}  */
 module.exports = {
@@ -70,7 +68,6 @@ module.exports = {
 			filename: "[name].css",
 		}),
 		new CleanWebpackPlugin(),
-		// new EnvironmentPlugin(envKeys),
 	],
 	optimization: {
 		minimize: true,
